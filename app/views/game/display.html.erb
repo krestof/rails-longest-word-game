@@ -1,0 +1,11 @@
+<p><%= @result[:message] %></p>
+<p>your score: <%= @result[:score] %></p>
+<p>you took: <%= @result[:time] %> seconds</p>
+
+<p>History</p>
+<p> Your have played: <%= @average[:play_count] %> times</p>
+<p> Your average score: <%= @average[:score] %> points</p>
+<p> Your average time: <%= @average[:time] %> seconds</p>
+
+<%= link_to "Play again", "/guess"  %>
+

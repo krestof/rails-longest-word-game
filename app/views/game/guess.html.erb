@@ -1,0 +1,17 @@
+<h1>Guess the word</h1>
+<ul>
+  <% @grid.each do |letter| %>
+  <%= letter %>
+  <% end %>
+</ul>
+
+
+<form action="/display">
+  <label form="question">Type in your longest word</label>
+  <input type="text" id="question" name="answer" placeholder="Your word">
+  <input type="submit" value="Go on!">
+  <input type="hidden" id="grid" name="grid" value=<%= @grid.join %>>
+  <input type="hidden" id="time" name="time" value=<%= @time.to_i %>>
+</form>
+
+<!-- (Date.parse @time).strftime("%H%M%S") -->
